@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine? 💕</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Crimson+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating hearts background -->
+    <div class="heart-bg">
+        <div class="floating-heart">💕</div>
+        <div class="floating-heart">💖</div>
+        <div class="floating-heart">💗</div>
+        <div class="floating-heart">💝</div>
+        <div class="floating-heart">💕</div>
+        <div class="floating-heart">💖</div>
+        <div class="floating-heart">💗</div>
+        <div class="floating-heart">💝</div>
+        <div class="floating-heart">💕</div>
+    </div>
+
+    <!-- Main container -->
+    <div class="container">
+        <div class="card">
+            <div class="initial-content">
+                <h1>My Dearest</h1>
+                <div class="big-heart">💖</div>
+                <p class="subtitle">I have something important to ask you...</p>
+                <p class="message">
+                    Every moment with you feels like magic. Your smile brightens my darkest days, 
+                    and your laugh is my favorite sound in the world. This Valentine's Day, 
+                    I want to make it official in the most special way.
+                </p>
+                <p class="message" style="font-size: 1.4rem; font-weight: 600; color: var(--deep-rose); margin-bottom: 2rem;">
+                    Will you be my Valentine? 💕
+                </p>
+                
+                <div class="buttons">
+                    <button class="yes-btn" onclick="handleYes()">Yes! 💕</button>
+                    <button class="no-btn" onclick="handleNo(event)">Maybe later...</button>
+                </div>
+            </div>
+            
+            <div class="response" id="yesResponse">
+                <div class="celebration">🎉💖🎊</div>
+                <p class="response-text">You just made me the happiest person alive!</p>
+                <div class="big-heart">💕</div>
+                <p class="response-message">
+                    I promise to cherish every moment we share together. Happy Valentine's Day, my love! 
+                    Here's to many more beautiful memories together. ❤️
+                </p>
+                
+                <!-- Photo gallery -->
+                <div class="photo-gallery">
+                    <p class="gallery-title">Our Beautiful Moments Together</p>
+                    <div class="gallery-grid">
+                        <div class="photo-frame">
+                            <img src="photo1.jpg" alt="Our memory 1" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22%3E%3Crect fill=%22%23ffccd5%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%22200%22 y=%22150%22 text-anchor=%22middle%22 font-size=%2220%22 fill=%22%23c9184a%22 font-family=%22Arial%22%3EAdd photo1.jpg%3C/text%3E%3C/svg%3E'">
+                            <div class="photo-caption">Our first adventure</div>
+                        </div>
+                        <div class="photo-frame">
+                            <img src="photo2.png" alt="Our memory 2" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22%3E%3Crect fill=%22%23ffccd5%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%22200%22 y=%22150%22 text-anchor=%22middle%22 font-size=%2220%22 fill=%22%23c9184a%22 font-family=%22Arial%22%3EAdd photo2.jpg%3C/text%3E%3C/svg%3E'">
+                            <div class="photo-caption">That perfect day</div>
+                        </div>
+                        <div class="photo-frame">
+                            <img src="photo3.png" alt="Our memory 3" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22%3E%3Crect fill=%22%23ffccd5%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%22200%22 y=%22150%22 text-anchor=%22middle%22 font-size=%2220%22 fill=%22%23c9184a%22 font-family=%22Arial%22%3EAdd photo3.jpg%3C/text%3E%3C/svg%3E'">
+                            <div class="photo-caption">Always laughing together</div>
+                        </div>
+                        <div class="photo-frame">
+                            <img src="photo4.jpg" alt="Our memory 4" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22%3E%3Crect fill=%22%23ffccd5%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%22200%22 y=%22150%22 text-anchor=%22middle%22 font-size=%2220%22 fill=%22%23c9184a%22 font-family=%22Arial%22%3EAdd photo4.jpg%3C/text%3E%3C/svg%3E'">
+                            <div class="photo-caption">You and me forever</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Thinking response -->
+            <div class="response" id="thinkingResponse">
+                <div class="thinking-icon">💭</div>
+                <p class="response-text">Take all the time you need...</p>
+                <p class="response-message">
+                    I'll be here waiting, because you're worth every moment. 
+                    Think about all the beautiful times we've shared and all the memories we'll create together. ❤️
+                </p>
+                <div class="thinking-hearts">💕</div>
+                <button class="yes-btn" onclick="handleYes()" style="margin-top: 2rem;">
+                    I've thought about it... Yes! 💖
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti container -->
+    <div class="confetti" id="confetti"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
